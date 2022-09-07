@@ -1,0 +1,33 @@
+.navBarBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navAnchor{
+    text-decoration: none;
+    font-weight: 100;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navBarList{
+    display: block;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+}
+a:hover{
+    color: rgb(161, 240, 161);
+    font-size: 20px;
+}
+.logoImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgHome{
+width: 300px;
+}
