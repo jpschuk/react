@@ -1,0 +1,54 @@
+
+.card-container {
+	background-color: rgb(198, 192, 192);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+	border: solid 1px black;
+	flex-direction: column;
+	box-shadow: 1px 1px 1px 1px rgb(193, 182, 182);
+	border-radius: 10px;
+}
+.page-content {
+	width: 85%;
+	margin-top: 20px;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Gill Sans';
+	flex-direction: column;
+}
+
+.card-detail {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.img-card {
+	width: 100%;
+	height: 280px
+}
+.card-body {
+	width: 100%;
+	margin: auto;
+}
+
+.titulo-card {
+	font-family: serif;
+	text-align: center;
+}
+
+.carrito-boton {
+margin-bottom: 15px;
+ border-radius: 4px;
+ background-color: whitesmoke);
+ color: grey;
+ font-style: italic;
+}
+
+.carrito-boton:hover{
+	font-size: 18px;
+}
