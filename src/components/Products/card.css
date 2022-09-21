@@ -41,14 +41,3 @@
 	text-align: center;
 }
 
-.carrito-boton {
-margin-bottom: 15px;
- border-radius: 4px;
- background-color: whitesmoke);
- color: grey;
- font-style: italic;
-}
-
-.carrito-boton:hover{
-	font-size: 18px;
-}
