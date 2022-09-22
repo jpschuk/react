@@ -18,7 +18,8 @@ export default function ItemCount({ initial = 1, stock }) {
         if (count <= 1) {
             alert("no puede ordenar menos");
         } else {
-            setCount(count - 1);
+     
+           setCount(count - 1);
         }
     }
 
@@ -37,3 +38,4 @@ export default function ItemCount({ initial = 1, stock }) {
         </section>
     );
 }
+

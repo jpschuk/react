@@ -1,40 +1,40 @@
 /** @format */
 import Card from "./Card";
 import ItemCount from "./ItemCount";
+import {data} from "../services/mockAPI";
+import { useEffect } from "react";
+import { useState } from "react";
 function ItemlistContainer({ greeting }) {
+    const [products,setProducts] = useState([])
+        const getData =()=>{
+            return new Promise ((resolve) =>
+                setTimeout(()=>{
+                    resolve(data) 
+                },5000)
+            )
+        }
+        const getDataDos = async()=>{
+            return setProducts (await getData())
+        }
+        useEffect(()=>{
+            getDataDos()
+        },[])
     return (
         <section className='page-content'>
             <h2>{greeting}</h2>
             <div className='row main-container'>
-                <Card
-                    titulo='Inodoro de loza'
-                    img='https://familiabercomat.quickresults.co/product/image/medium/147318_0.jpg'
-                    descripcion='Inodoro de loza capea tradicional'
-                    precio='$1000'
-                    stock = {9}
-                />
-                <Card
-                    titulo='Bidet de loza'
-                    img='https://centerceramicos.com/wp-content/uploads/2021/06/BIDET-ITALIANA-300x300.jpg'
-                    descripcion='Bidet de loza capea'
-                    precio='$200'
-                    stock = {4}
-                />
-
-                <Card
-                    titulo='lavatorio de loza'
-                    img='https://images.cerymatlaplata.com.ar/products/5e0de517bc8981577968919.jpg'
-                    descripcion='Lavatorio de loza completo'
-                    precio='$300'
-                    stock = {10}
-                />
-                <Card
-                    titulo='Migitorio'
-                    img='https://http2.mlstatic.com/D_NQ_NP_897514-MLM43172109111_082020-O.jpg'
-                    descripcion='Migitorio de loza capea'
-                    precio='$500'
-                    stock = {4}
-                />
+                {products.map((product) => {
+                    return (
+                        <Card
+                            titulo={product.title}
+                            img={product.img}
+                            descripcion={product.detail}
+                            precio={product.price}
+                            stock={product.stock}
+                            id={product.id}
+                        />
+                    );
+                })}
             </div>
         </section>
     );
