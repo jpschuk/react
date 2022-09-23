@@ -1,12 +1,12 @@
 import Cartwidget from   './Carwidget';
 import './navBar.css'
-import logo from "../../assets/img/logoHome.png"
+// import logo from "../assets/img/logoHome.png"
 function NavBar(){
     return(
 <header>
     <div className="row logoImg">
         <a className="row logoImg" href="#">
-        <img className="col-lg-12 imgHome" src={logo} alt=""/>
+        <img className="col-lg-12 imgHome" src="/assets/img/logoHome.png" alt=""/>
         </a>
     </div>
     <section className = "row navBarContainer">

@@ -1,12 +1,12 @@
 export const data = [
     {
         id: 1,
-        title: "inodor de loza",
+        title: "inodoro de loza",
         price: 10000,
         stock: 2,
         category: "loza",
         detail: "inodoro enlozado de la linea capea  andina",
-        img: "../../assets/img/inodoro.png",
+        img: "/assets/img/inodoro.png",
     },
 
     {
@@ -56,6 +56,33 @@ export const data = [
         stock: 7,
         category: "caño",
         detail: "caño de ppm 1/2 tubileno",
-        img: "/assets/img/bombagua.png",
+        img: "/assets/img/tubileno.png",
+    },
+
+    {
+        id: 7,
+        title: "caño awaduct",
+        price: 2300,
+        stock: 50,
+        category: "cañoCloaca",
+        detail: "caño para cloaca de polipropileno de 110",
+        img: "/assets/img/awaduct110.png",
+    },
+    {
+        id: 8,
+        title: "accesorios para  baño",
+        price: 2100,
+        stock: 12,
+        category: "baño",
+        detail: "juego de 5 piezas de accesorios de loza para baño",
+        img: "/assets/img/accloza.png",
     },
 ];
+
+export default function getItems() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(data);
+        },2500);
+    });
+}

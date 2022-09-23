@@ -39,6 +39,7 @@
 .titulo-card {
 	font-family: serif;
 	text-align: center;
+	text-transform: capitalize;
 }
 
 .item-count-box {

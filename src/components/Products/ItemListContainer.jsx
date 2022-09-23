@@ -1,42 +1,35 @@
 /** @format */
 import Card from "./Card";
 import ItemCount from "./ItemCount";
-import {data} from "../services/mockAPI";
+import getItems from ".//../services/mockAPI";
 import { useEffect } from "react";
 import { useState } from "react";
-function ItemlistContainer({ greeting }) {
-    const [products,setProducts] = useState([])
-        const getData =()=>{
-            return new Promise ((resolve) =>
-                setTimeout(()=>{
-                    resolve(data) 
-                },5000)
-            )
-        }
-        const getDataDos = async()=>{
-            return setProducts (await getData())
-        }
-        useEffect(()=>{
-            getDataDos()
-        },[])
-    return (
-        <section className='page-content'>
-            <h2>{greeting}</h2>
-            <div className='row main-container'>
-                {products.map((product) => {
-                    return (
-                        <Card
-                            titulo={product.title}
-                            img={product.img}
-                            descripcion={product.detail}
-                            precio={product.price}
-                            stock={product.stock}
-                            id={product.id}
-                        />
-                    );
-                })}
-            </div>
-        </section>
-    );
+export default function ItemlistContainer({ greeting }) {
+    let [data,setData] = useState([])
+
+    useEffect(() =>{
+        getItems().then((respuestasDatos) =>{
+            setData(respuestasDatos)
+        })
+    },[])
+
+return (
+    <section className="page-content">
+        <div className="row main-container">
+            {data.map((item) =>{
+                return(
+                    <Card
+                    titulo={item.title}
+                    img={item.img}
+                    descripcion={item.detail}
+                    precio={item.price}
+                    stock={item.stock}
+                    id={item.id}
+                    ></Card>
+                )
+            })}
+        </div>
+    </section>
+    )
+    
 }
-export default ItemlistContainer;
