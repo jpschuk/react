@@ -1,4 +1,4 @@
-export const data = [
+ const data = [
     {
         id: 1,
         title: "inodoro de loza",
@@ -79,10 +79,18 @@ export const data = [
     },
 ];
 
-export default function getItems() {
+// export default function getItems() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve(data);
+//         }, 2500);
+//     });
+// }
+
+export default function getSingleItem() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(data);
-        },2500);
+            resolve(data[2]);
+        }, 2500);
     });
 }

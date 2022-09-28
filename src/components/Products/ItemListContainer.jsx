@@ -1,11 +1,11 @@
 /** @format */
 import Card from "./Card";
 import ItemCount from "./ItemCount";
-import getItems from ".//../services/mockAPI";
+import getItems from "../services/mockAPI";
 import { useEffect } from "react";
 import { useState } from "react";
 export default function ItemlistContainer({ greeting }) {
-    let [data,setData] = useState([])
+    const [data,setData] = useState([])
 
     useEffect(() =>{
         getItems().then((respuestasDatos) =>{
@@ -19,7 +19,7 @@ return (
             {data.map((item) =>{
                 return(
                     <Card
-                    titulo={item.title}
+                    titulo={item.title} X
                     img={item.img}
                     descripcion={item.detail}
                     precio={item.price}
