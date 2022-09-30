@@ -1,4 +1,4 @@
- const data = [
+const data = [
     {
         id: 1,
         title: "inodoro de loza",
@@ -79,18 +79,19 @@
     },
 ];
 
-// export default function getItems() {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve(data);
-//         }, 2500);
-//     });
-// }
-
-export default function getSingleItem() {
+function getItems() {
     return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(data[2]);
-        }, 2500);
+            resolve(data);
     });
 }
+
+export default function getSingleItem(id) {
+    return new Promise((resolve, reject) => {
+            for (let i = 0; i <= data.length; i++) {
+                if (data[i].id === parseInt(id)) {
+                    resolve(data[i]);
+                }
+            }
+    });
+}
+export { getItems };

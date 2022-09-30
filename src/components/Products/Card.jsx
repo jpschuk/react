@@ -1,7 +1,9 @@
 /** @format */
+import { Link } from "react-router-dom";
 import "./card.css";
 import ItemCount from "./ItemCount";
-function Card({ img, titulo, descripcion, precio,stock}) {
+function Card({ img, titulo, descripcion, precio,id }) {
+const urlDetalle = `/tienda/${id}}`
     return (
         <section className='col-3 boxbox'>
             <div className='card-container'>
@@ -15,7 +17,9 @@ function Card({ img, titulo, descripcion, precio,stock}) {
                     <button className='carrito-boton'>
                         Agregar al Carrito
                     </button>
-            <ItemCount stock = {stock}/>
+            <Link to= {urlDetalle}>
+                    <button>Ver Mas</button>
+            </Link>
                 </div>
             </div>
         </section>

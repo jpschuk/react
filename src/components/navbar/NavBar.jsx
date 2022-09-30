@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Cartwidget from   './Carwidget';
 import './navBar.css'
 // import logo from "../assets/img/logoHome.png"
@@ -10,27 +11,27 @@ function NavBar(){
         </a>
     </div>
     <section className = "row navBarContainer">
-        <div className ="col-lg col-md-6 col-sm-9 navBarBox">
+        <div className ="col-lg col-md-3 col-sm-9 navBarBox">
             <li className ="navBarList">
-                <a href="#" className ="navAnchor">Home</a>
+                <Link to ="/" className ="navAnchor">Home</Link>
             </li>
         </div>
 
         <div className ="col-lg col-md-6 col-sm-9">
             <li className ="navBarList">
-                <a href="#" className ="navAnchor">Tienda</a>
+                <Link to ="/tienda" className ="navAnchor">Tienda</Link>
             </li>
         </div>
 
         <div className ="col-lg col-md-6 col-sm-9">
             <li className ="navBarList">
-                <a href="#" className ="navAnchor">Contacto</a>
+                <Link to="#" className ="navAnchor">Contacto</Link>
             </li>
         </div>
 
         <div className ="col-lg col-md-6 col-sm-9">
             <li className ="navBarList">
-                <a href="#" className ="navAnchor">Nosotros</a>
+                <Link to ="#" className ="navAnchor">Nosotros</Link>
             </li>
         </div>
         <div className ="col">
