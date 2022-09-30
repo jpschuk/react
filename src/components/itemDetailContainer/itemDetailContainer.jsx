@@ -25,6 +25,9 @@ export default function ItemDetailContainer(){
             <h4>{data.price}</h4>
             <p>{data.description}</p>
             <ItemCount stock ={data.stock}/>
+            <button className='carrito-boton'>
+                        Agregar al Carrito
+                    </button>
         </div>
         </section>
     )
